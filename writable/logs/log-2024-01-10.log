@@ -1,0 +1,631 @@
+CRITICAL - 2024-01-10 07:37:54 --> Undefined property: CodeIgniter\Database\MySQLi\Result::$getResult
+in APPPATH\Controllers\Kasmasuk.php on line 14.
+ 1 APPPATH\Controllers\Kasmasuk.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Database\\MySQLi\\Result::$getResult', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Controllers\\Kasmasuk.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+INFO - 2024-01-10 14:41:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 14:43:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-10 07:43:28 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`dbdigitalmasjid`.`tbl_kas_masjid`, CONSTRAINT `tbl_kas_masjid_ibfk_1` FOREIGN KEY (`iddonaturmasjid`) REFERENCES `tbl_donatur` (`iddonatur`) ON UPDATE CASCADE) in D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\app\Models\ModelKasMasuk.php(18): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\app\Controllers\Kasmasuk.php(33): App\Models\Modelkasmasuk->insertData(Array)
+#6 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\CodeIgniter.php(919): App\Controllers\Kasmasuk->save()
+#7 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+#8 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\K...')
+#11 {main}
+CRITICAL - 2024-01-10 07:43:28 --> Cannot add or update a child row: a foreign key constraint fails (`dbdigitalmasjid`.`tbl_kas_masjid`, CONSTRAINT `tbl_kas_masjid_ibfk_1` FOREIGN KEY (`iddonaturmasjid`) REFERENCES `tbl_donatur` (`iddonatur`) ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_kas_masjid` (`tanggal`, `ket`, `kas_masuk`, `kas_keluar`, `status`, `jenis_kas`, `iddonaturmasjid`) VALUES (:tanggal:, :ket:, :kas_masuk:, :kas_keluar:, :status:, :jenis_kas:, :iddonaturmasjid:)', [...], false)
+ 2 APPPATH\Models\ModelKasMasuk.php(18): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Kasmasuk.php(33): App\Models\Modelkasmasuk->insertData([...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->save()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+INFO - 2024-01-10 14:43:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 14:44:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 14:44:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 14:44:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 14:44:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-10 15:03:27 --> Undefined array key "nama"
+in APPPATH\Views\Kas\view_kasmasuk.php on line 96.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+CRITICAL - 2024-01-10 15:04:27 --> Undefined array key "nama"
+in APPPATH\Views\Kas\view_kasmasuk.php on line 96.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+CRITICAL - 2024-01-10 15:04:29 --> Undefined array key "nama"
+in APPPATH\Views\Kas\view_kasmasuk.php on line 96.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+CRITICAL - 2024-01-10 15:04:29 --> Undefined array key "nama"
+in APPPATH\Views\Kas\view_kasmasuk.php on line 96.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+CRITICAL - 2024-01-10 15:05:36 --> Undefined array key "nama"
+in APPPATH\Views\Kas\view_kasmasuk.php on line 96.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+CRITICAL - 2024-01-10 15:05:54 --> Undefined array key "nama"
+in APPPATH\Views\Kas\view_kasmasuk.php on line 96.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+CRITICAL - 2024-01-10 15:06:05 --> Undefined array key "namadonatur"
+in APPPATH\Views\Kas\view_kasmasuk.php on line 96.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "namadonatur"', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+CRITICAL - 2024-01-10 15:07:09 --> Undefined array key "namadonatur"
+in APPPATH\Views\Kas\view_kasmasuk.php on line 96.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "namadonatur"', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+CRITICAL - 2024-01-10 15:07:11 --> Undefined array key "namadonatur"
+in APPPATH\Views\Kas\view_kasmasuk.php on line 96.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "namadonatur"', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+CRITICAL - 2024-01-10 15:07:11 --> Undefined array key "namadonatur"
+in APPPATH\Views\Kas\view_kasmasuk.php on line 96.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "namadonatur"', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+CRITICAL - 2024-01-10 15:08:36 --> Undefined array key "namadonatur"
+in APPPATH\Views\Kas\view_kasmasuk.php on line 96.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "namadonatur"', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+CRITICAL - 2024-01-10 15:13:22 --> Undefined array key "namadonatur"
+in APPPATH\Views\Kas\view_kasmasuk.php on line 96.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "namadonatur"', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+CRITICAL - 2024-01-10 15:15:02 --> Undefined array key "namadonatur"
+in APPPATH\Views\Kas\view_kasmasuk.php on line 96.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "namadonatur"', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+CRITICAL - 2024-01-10 15:15:38 --> Undefined array key "namadonatur"
+in APPPATH\Views\Kas\view_kasmasuk.php on line 96.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "namadonatur"', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+CRITICAL - 2024-01-10 15:17:24 --> Undefined array key "namadonatur"
+in APPPATH\Views\Kas\view_kasmasuk.php on line 96.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "namadonatur"', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+CRITICAL - 2024-01-10 15:18:29 --> Undefined array key "namadonatur"
+in APPPATH\Views\Kas\view_kasmasuk.php on line 96.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "namadonatur"', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+CRITICAL - 2024-01-10 15:19:59 --> Undefined array key "namadonatur"
+in APPPATH\Views\Kas\view_kasmasuk.php on line 96.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "namadonatur"', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+CRITICAL - 2024-01-10 15:20:00 --> Undefined array key "namadonatur"
+in APPPATH\Views\Kas\view_kasmasuk.php on line 96.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "namadonatur"', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+CRITICAL - 2024-01-10 15:20:01 --> Undefined array key "namadonatur"
+in APPPATH\Views\Kas\view_kasmasuk.php on line 96.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "namadonatur"', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+CRITICAL - 2024-01-10 15:23:16 --> Undefined array key "namadonatur"
+in APPPATH\Views\Kas\view_kasmasuk.php on line 96.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "namadonatur"', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+INFO - 2024-01-10 15:27:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-10 15:27:43 --> Undefined property: stdClass::$nama
+in APPPATH\Views\Kas\view_kasmasuk.php on line 300.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(300): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 300)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+INFO - 2024-01-10 15:28:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-10 15:28:14 --> Undefined property: stdClass::$nama
+in APPPATH\Views\Kas\view_kasmasuk.php on line 303.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(303): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 303)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+INFO - 2024-01-10 15:29:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-10 15:29:16 --> Undefined property: stdClass::$namadonatur
+in APPPATH\Views\Kas\view_kasmasuk.php on line 300.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(300): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$namadonatur', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 300)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+INFO - 2024-01-10 15:29:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 15:29:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 15:30:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 15:31:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 15:32:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-10 08:33:09 --> mysqli_sql_exception: Unknown column 'namadonatur' in 'field list' in D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\app\Models\ModelKasMasuk.php(20): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\app\Controllers\Kasmasuk.php(33): App\Models\Modelkasmasuk->insertData(Array)
+#6 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\CodeIgniter.php(919): App\Controllers\Kasmasuk->save()
+#7 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+#8 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\K...')
+#11 {main}
+CRITICAL - 2024-01-10 08:33:09 --> Unknown column 'namadonatur' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_kas_masjid` (`tanggal`, `namadonatur`, `ket`, `kas_masuk`, `kas_keluar`, `jenis_kas`, `iddonaturmasjid`) VALUES (:tanggal:, :namadonatur:, :ket:, :kas_masuk:, :kas_keluar:, :jenis_kas:, :iddonaturmasjid:)', [...], false)
+ 2 APPPATH\Models\ModelKasMasuk.php(20): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Kasmasuk.php(33): App\Models\Modelkasmasuk->insertData([...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->save()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+ERROR - 2024-01-10 08:33:34 --> mysqli_sql_exception: Unknown column 'nama' in 'field list' in D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\app\Models\ModelKasMasuk.php(20): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\app\Controllers\Kasmasuk.php(33): App\Models\Modelkasmasuk->insertData(Array)
+#6 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\CodeIgniter.php(919): App\Controllers\Kasmasuk->save()
+#7 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+#8 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\K...')
+#11 {main}
+CRITICAL - 2024-01-10 08:33:34 --> Unknown column 'nama' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_kas_masjid` (`tanggal`, `nama`, `ket`, `kas_masuk`, `kas_keluar`, `jenis_kas`, `iddonaturmasjid`) VALUES (:tanggal:, :nama:, :ket:, :kas_masuk:, :kas_keluar:, :jenis_kas:, :iddonaturmasjid:)', [...], false)
+ 2 APPPATH\Models\ModelKasMasuk.php(20): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Kasmasuk.php(33): App\Models\Modelkasmasuk->insertData([...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->save()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+ERROR - 2024-01-10 08:34:06 --> mysqli_sql_exception: Unknown column 'nama' in 'field list' in D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\app\Models\ModelKasMasuk.php(20): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\app\Controllers\Kasmasuk.php(33): App\Models\Modelkasmasuk->insertData(Array)
+#6 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\CodeIgniter.php(919): App\Controllers\Kasmasuk->save()
+#7 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+#8 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\K...')
+#11 {main}
+CRITICAL - 2024-01-10 08:34:06 --> Unknown column 'nama' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_kas_masjid` (`tanggal`, `nama`, `ket`, `kas_masuk`, `kas_keluar`, `jenis_kas`, `iddonaturmasjid`) VALUES (:tanggal:, :nama:, :ket:, :kas_masuk:, :kas_keluar:, :jenis_kas:, :iddonaturmasjid:)', [...], false)
+ 2 APPPATH\Models\ModelKasMasuk.php(20): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Kasmasuk.php(33): App\Models\Modelkasmasuk->insertData([...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->save()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+ERROR - 2024-01-10 08:34:08 --> mysqli_sql_exception: Unknown column 'nama' in 'field list' in D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\app\Models\ModelKasMasuk.php(20): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\app\Controllers\Kasmasuk.php(33): App\Models\Modelkasmasuk->insertData(Array)
+#6 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\CodeIgniter.php(919): App\Controllers\Kasmasuk->save()
+#7 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+#8 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\K...')
+#11 {main}
+CRITICAL - 2024-01-10 08:34:08 --> Unknown column 'nama' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_kas_masjid` (`tanggal`, `nama`, `ket`, `kas_masuk`, `kas_keluar`, `jenis_kas`, `iddonaturmasjid`) VALUES (:tanggal:, :nama:, :ket:, :kas_masuk:, :kas_keluar:, :jenis_kas:, :iddonaturmasjid:)', [...], false)
+ 2 APPPATH\Models\ModelKasMasuk.php(20): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Kasmasuk.php(33): App\Models\Modelkasmasuk->insertData([...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->save()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+INFO - 2024-01-10 15:35:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 15:36:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 15:36:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 15:42:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 15:45:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 15:46:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-10 15:48:53 --> Undefined array key "namadonatur"
+in APPPATH\Views\Kas\view_kasmasuk.php on line 96.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "namadonatur"', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+CRITICAL - 2024-01-10 15:49:15 --> Undefined array key "namadonatur"
+in APPPATH\Views\Kas\view_kasmasuk.php on line 96.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "namadonatur"', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+CRITICAL - 2024-01-10 15:49:17 --> Undefined array key "namadonatur"
+in APPPATH\Views\Kas\view_kasmasuk.php on line 96.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "namadonatur"', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+CRITICAL - 2024-01-10 15:49:31 --> Undefined array key "action"
+in APPPATH\Views\Kas\view_kasmasuk.php on line 101.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(101): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "action"', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 101)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+INFO - 2024-01-10 15:49:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 08:51:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 08:52:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 08:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 08:55:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 08:55:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 08:56:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 16:00:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 16:01:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 16:05:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 16:07:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 16:08:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 16:08:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 16:08:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 16:08:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 16:08:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 16:12:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 16:13:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-10 09:14:23 --> syntax error, unexpected single-quoted string "ket", expecting ")"
+in APPPATH\Controllers\Kasmasuk.php on line 52.
+ 1 SYSTEMPATH\Router\Router.php(512): CodeIgniter\Router\AutoRouter->getRoute('Kasmasuk/index', 'get')
+ 2 SYSTEMPATH\Router\Router.php(208): CodeIgniter\Router\Router->autoRoute('Kasmasuk/index')
+ 3 SYSTEMPATH\CodeIgniter.php(800): CodeIgniter\Router\Router->handle('Kasmasuk/index')
+ 4 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+INFO - 2024-01-10 16:14:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 16:15:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-10 09:16:21 --> mysqli_sql_exception: Unknown column 'nama' in 'field list' in D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `tbl_kas...', 0)
+#1 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbl_kas...')
+#2 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbl_kas...')
+#3 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_kas...', Array, false)
+#4 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\app\Models\ModelKasMasuk.php(31): CodeIgniter\Database\BaseBuilder->update(Array, Array)
+#5 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\app\Controllers\Kasmasuk.php(56): App\Models\Modelkasmasuk->updatekasmasuk(Array, '2024-01-10')
+#6 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\CodeIgniter.php(919): App\Controllers\Kasmasuk->update()
+#7 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+#8 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\K...')
+#11 {main}
+CRITICAL - 2024-01-10 09:16:21 --> Unknown column 'nama' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_kas_masjid` SET `tanggal` = :tanggal:, `nama` = :nama:, `ket` = :ket:, `kas_masuk` = :kas_masuk:, `jenis_kas` = :jenis_kas:
+WHERE `tanggal` = :tanggal.1:', [...], false)
+ 2 APPPATH\Models\ModelKasMasuk.php(31): CodeIgniter\Database\BaseBuilder->update([...], [...])
+ 3 APPPATH\Controllers\Kasmasuk.php(56): App\Models\Modelkasmasuk->updatekasmasuk([...], '2024-01-10')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->update()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+ERROR - 2024-01-10 09:16:30 --> mysqli_sql_exception: Unknown column 'nama' in 'field list' in D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `tbl_kas...', 0)
+#1 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbl_kas...')
+#2 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbl_kas...')
+#3 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_kas...', Array, false)
+#4 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\app\Models\ModelKasMasuk.php(31): CodeIgniter\Database\BaseBuilder->update(Array, Array)
+#5 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\app\Controllers\Kasmasuk.php(56): App\Models\Modelkasmasuk->updatekasmasuk(Array, '2024-01-10')
+#6 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\CodeIgniter.php(919): App\Controllers\Kasmasuk->update()
+#7 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+#8 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\K...')
+#11 {main}
+CRITICAL - 2024-01-10 09:16:30 --> Unknown column 'nama' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_kas_masjid` SET `tanggal` = :tanggal:, `nama` = :nama:, `ket` = :ket:, `kas_masuk` = :kas_masuk:, `jenis_kas` = :jenis_kas:
+WHERE `tanggal` = :tanggal.1:', [...], false)
+ 2 APPPATH\Models\ModelKasMasuk.php(31): CodeIgniter\Database\BaseBuilder->update([...], [...])
+ 3 APPPATH\Controllers\Kasmasuk.php(56): App\Models\Modelkasmasuk->updatekasmasuk([...], '2024-01-10')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->update()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+ERROR - 2024-01-10 09:16:31 --> mysqli_sql_exception: Unknown column 'nama' in 'field list' in D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `tbl_kas...', 0)
+#1 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbl_kas...')
+#2 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbl_kas...')
+#3 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_kas...', Array, false)
+#4 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\app\Models\ModelKasMasuk.php(31): CodeIgniter\Database\BaseBuilder->update(Array, Array)
+#5 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\app\Controllers\Kasmasuk.php(56): App\Models\Modelkasmasuk->updatekasmasuk(Array, '2024-01-10')
+#6 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\CodeIgniter.php(919): App\Controllers\Kasmasuk->update()
+#7 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+#8 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\K...')
+#11 {main}
+CRITICAL - 2024-01-10 09:16:31 --> Unknown column 'nama' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_kas_masjid` SET `tanggal` = :tanggal:, `nama` = :nama:, `ket` = :ket:, `kas_masuk` = :kas_masuk:, `jenis_kas` = :jenis_kas:
+WHERE `tanggal` = :tanggal.1:', [...], false)
+ 2 APPPATH\Models\ModelKasMasuk.php(31): CodeIgniter\Database\BaseBuilder->update([...], [...])
+ 3 APPPATH\Controllers\Kasmasuk.php(56): App\Models\Modelkasmasuk->updatekasmasuk([...], '2024-01-10')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->update()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+INFO - 2024-01-10 16:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 16:20:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-10 09:21:08 --> mysqli_sql_exception: Unknown column 'nama' in 'field list' in D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `tbl_kas...', 0)
+#1 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbl_kas...')
+#2 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbl_kas...')
+#3 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Database\BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_kas...', Array, false)
+#4 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\app\Models\ModelKasMasuk.php(31): CodeIgniter\Database\BaseBuilder->update(Array, Array)
+#5 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\app\Controllers\Kasmasuk.php(56): App\Models\Modelkasmasuk->updatekasmasuk(Array, '2024-01-10')
+#6 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\CodeIgniter.php(919): App\Controllers\Kasmasuk->update()
+#7 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+#8 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Data Ridho\Kuliah Ridho\Semester 5\WEB - 2 Ridho Rahman 2110026\DigitalMasjid\system\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\K...')
+#11 {main}
+CRITICAL - 2024-01-10 09:21:08 --> Unknown column 'nama' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_kas_masjid` SET `tanggal` = :tanggal:, `nama` = :nama:, `ket` = :ket:, `kas_masuk` = :kas_masuk:, `jenis_kas` = :jenis_kas:
+WHERE `tanggal` = :tanggal.1:', [...], false)
+ 2 APPPATH\Models\ModelKasMasuk.php(31): CodeIgniter\Database\BaseBuilder->update([...], [...])
+ 3 APPPATH\Controllers\Kasmasuk.php(56): App\Models\Modelkasmasuk->updatekasmasuk([...], '2024-01-10')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->update()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+INFO - 2024-01-10 16:26:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 16:28:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 16:29:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 16:31:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 16:31:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 16:32:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 16:32:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 16:32:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 16:33:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 16:34:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 16:35:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 16:35:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 16:35:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-01-10 16:35:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-01-10 16:38:45 --> Undefined array key "iddonatur"
+in APPPATH\Views\Kas\view_kasmasuk.php on line 102.
+ 1 APPPATH\Views\Kas\view_kasmasuk.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "iddonatur"', 'D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php', 102)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\app\\Views\\Kas\\view_kasmasuk.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kas/view_kasmasuk', [], true)
+ 5 APPPATH\Controllers\Kasmasuk.php(15): view('kas/view_kasmasuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Kasmasuk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kasmasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Data Ridho\\Kuliah Ridho\\Semester 5\\WEB - 2 Ridho Rahman 2110026\\DigitalMasjid\\public\\index.php')
+INFO - 2024-01-10 16:39:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
